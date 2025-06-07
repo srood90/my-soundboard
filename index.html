@@ -20,6 +20,7 @@
 
   <script>
     function playSound(id) {
+      console.log('Trying to play:', id);
       const sound = document.getElementById(id);
       sound.currentTime = 0; // rewind to start
       sound.play();
