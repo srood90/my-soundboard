@@ -18,13 +18,19 @@
   <audio id="sound1" src="sounds/Chopping-Down-Trees.mp3"></audio>
   <audio id="sound2" src="sounds/sound2.mp3"></audio>
 
-  <script>
-    function playSound(id) {
-      console.log('Trying to play:', id);
-      const sound = document.getElementById(id);
-      sound.currentTime = 0; // rewind to start
+<script>
+  function playSound(id) {
+    const sound = document.getElementById(id);
+    if (sound.paused) {
       sound.play();
+    } else {
+      sound.pause();
     }
-  </script>
+    // Optional: Rewind to start if it ends
+    sound.onended = () => {
+      sound.currentTime = 0;
+    };
+  }
+</script>
 </body>
 </html>
