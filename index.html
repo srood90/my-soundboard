@@ -12,10 +12,16 @@
 </head>
 <body>
   <h1>My Soundboard</h1>
-  <button onclick="playSound('sound1')">Chopping-down-trees</button>
-  <button onclick="playSound('sound2')">Play Sound 2</button>
-
+  <button onclick="playSound('sound1')">Chopping down trees</button>
+  <button onclick="changeVolume('sound1', 0.1)">🔊</button>
+  <button onclick="changeVolume('sound1', -0.1)">🔉</button>
+  <span id="volume-sound1">Volume: 1.0</span>
   <audio id="sound1" src="sounds/Chopping-Down-Trees.mp3"></audio>
+  
+  <button onclick="playSound('sound2')">Sound 2</button>
+  <button onclick="changeVolume('sound2', 0.1)">🔊</button>
+  <button onclick="changeVolume('sound2', -0.1)">🔉</button>
+  <span id="volume-sound2">Volume: 1.0</span>
   <audio id="sound2" src="sounds/sound2.mp3"></audio>
 
 <script>
@@ -30,6 +36,11 @@
     sound.onended = () => {
       sound.currentTime = 0;
     };
+  }
+  function changeVolume(id, delta) {
+  const sound = document.getElementById(id);
+  sound.volume = Math.min(1, Math.max(0, sound.volume + delta));
+  document.getElementById(`volume-${id}`).textContent = `Volume: ${sound.volume.toFixed(1)}`;
   }
 </script>
 </body>
