@@ -23,6 +23,13 @@
   <audio id="sound1" src="sounds/Chopping-Down-Trees.mp3"></audio>
   </div>
 
+  <div class="flex-row">
+  <button class="btn-large" onclick="playSound('sound1')">Chopping d234own trees</button>
+  <button class="btn-small" onclick="changeVolume('sound1', 0.1)">🔊</button>
+  <button class="btn-small" onclick="changeVolume('sound1', -0.1)">🔉</button>
+  <span id="volume-sound1">Volume: 1.0</span>
+  <audio id="sound1" src="sounds/Chopping-Down-Trees.mp3"></audio>  
+  </div>
 <script>
   function playSound(id) {
     const sound = document.getElementById(id);
