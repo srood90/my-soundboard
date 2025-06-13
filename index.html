@@ -29,6 +29,14 @@
   <span id="volume-sound2">Vol: 1.0</span>
   <audio id="sound2" src="sounds/Toll-Of-The-Dead.mp3"></audio>  
   </div>
+
+  <div class="flex-row">
+  <button class="btn-large" onclick="playSound('sound3')">Skyrim Exploration</button>
+  <button class="btn-small" onclick="changeVolume('sound3', 0.1)">🔊</button>
+  <button class="btn-small" onclick="changeVolume('sound3', -0.1)">🔉</button>
+  <span id="volume-sound3">Vol: 1.0</span>
+  <audio id="sound3" src="sounds/Skyrim-Explore.mp3"></audio>  
+  </div>
 <script>
   function playSound(id) {
     const sound = document.getElementById(id);
@@ -45,7 +53,7 @@
   function changeVolume(id, delta) {
   const sound = document.getElementById(id);
   sound.volume = Math.min(1, Math.max(0, sound.volume + delta));
-  document.getElementById(`volume-${id}`).textContent = `Volume: ${sound.volume.toFixed(1)}`;
+  document.getElementById(`volume-${id}`).textContent = `Vol: ${sound.volume.toFixed(1)}`;
   }
 </script>
 </body>
