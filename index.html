@@ -6,8 +6,8 @@
   <title>Soundboard</title>
   <style>
     body { font-family: sans-serif; text-align: center; background: #111; color: #fff; padding: 2rem; }
-    .btn-large {width: 300px; height: 40px; font-size: 1.4rem;padding: 1rem; }
-    .btn-small {width: 10%; max-width: 40px;height: 40px; font-size: 1.4rem;padding: 1rem; }
+    .btn-large {width: 300px; height: 40px; font-size: 1rem;padding: .5rem; }
+    .btn-small {width: 10%; max-width: 40px;height: 40px; font-size: 1rem;padding: .5rem; }
     .flex-row {display:flex; flex-direction: row; gap: 1rem; margin-bottom: 1rem}
     
   </style>
@@ -18,7 +18,7 @@
   <button class="btn-large" onclick="playSound('sound1')">Chopping down trees</button>
   <button class="btn-small" onclick="changeVolume('sound1', 0.1)">🔊</button>
   <button class="btn-small" onclick="changeVolume('sound1', -0.1)">🔉</button>
-  <span id="volume-sound1">Volume: 1.0</span>
+  <span id="volume-sound1">Vol: 1.0</span>
   <audio id="sound1" src="sounds/Chopping-Down-Trees.mp3"></audio>
   </div>
 
@@ -26,7 +26,7 @@
   <button class="btn-large" onclick="playSound('sound1')">Chopping d234own trees</button>
   <button class="btn-small" onclick="changeVolume('sound1', 0.1)">🔊</button>
   <button class="btn-small" onclick="changeVolume('sound1', -0.1)">🔉</button>
-  <span id="volume-sound1">Volume: 1.0</span>
+  <span id="volume-sound1">Vol: 1.0</span>
   <audio id="sound1" src="sounds/Chopping-Down-Trees.mp3"></audio>  
   </div>
 <script>
